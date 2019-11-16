@@ -1,0 +1,9 @@
+{% extends 'policies/layout.html' %}
+{% block content %}
+<h3 class="text-left text-primary bg-primary">{{title}}</h3>
+    <ul class="list-group">
+        {%  for policy in policies %}
+            <li class="list-group-item"><a href="/policies/details/{{ policy.id }}">{{ policy.name }}</a></li>
+        {% endfor %}
+    </ul>
+{%  endblock %}
